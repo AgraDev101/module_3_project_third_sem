@@ -19,9 +19,11 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
               </form>
+              <!-- USER LOGIN BUTTON THAT TRIGGERS A MODEL WHEN CLICKED -->
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              User Login
+                User Login
               </button>
+              <!-- MODAL COMPONENT START FROM HERE -->
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -29,7 +31,8 @@
                     <h1 class="modal-title fs-5" id="exampleModalLabel">USER LOGIN FORM</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                <div class="modal-body">
+                  <div class="modal-body">
+                    <!-- FORM IN MODAL BEGINS FROM HERE -->
                   <form>
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -49,35 +52,43 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Basket</button>
+            <!-- BUTTON TO TRIGGER SIDEBAR TO DISPLAY PRODUCTS ADDED IN THE BASKET -->
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+              Basket
+            </button>
+            <!-- BASKET SIDEBAR BODY START FROM HERE -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasRightLabel">Basket Product List</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Basket Product List</h5>
+                <!-- BUTTON TO SHOW "X" ON SIDEBAR -->
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+            <div class="offcanvas-body">
+              <!-- CUSTOM CSS STYLE TO PRODUCT NAME AND QUANTITY IN A ROW  -->
+              <div style="display: flex; align-items: center;">
+                <h5>Product_Name</h5>
+                <!-- EXTRA CSS STYLE TO QUANTITY FORM FIELD IN LESS IN WIDTH  -->
+                <select style="max-width: 50%; margin: 10px;" class="form-select" aria-label="Default select example">
+                  <option selected>Quantity</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              <div style="display: flex; align-items: center;">
+                <h5>Product_Name</h5>
+                <select style="max-width: 50%; margin: 10px;" class="form-select" aria-label="Default select example">
+                  <option selected>Quantity</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
             </div>
-          <div class="offcanvas-body">
-            <div style="display: flex; align-items: center;">
-              <h5>Product_Name</h5>
-              <select style="max-width: 50%; margin: 10px;" class="form-select" aria-label="Default select example">
-                <option selected>Quantity</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-            <div style="display: flex; align-items: center;">
-              <h5>Product_Name</h5>
-              <select style="max-width: 50%; margin: 10px;" class="form-select" aria-label="Default select example">
-                <option selected>Quantity</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-          </div>
           </div>
         </div>
       </nav>
+      <!-- COMPONENT TO SORT PRODUCTS STARTS HERE -->
       <section style="margin: 50px auto; max-width: 85%;">
           <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
             <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
@@ -88,6 +99,8 @@
             <label class="btn btn-outline-primary" for="btnradio3">Sort by popularity</label>
           </div>
       </section>
+      <!-- COMPONENT TO SORT PRODUCTS ENDS HERE -->
+      <!-- PRODUCT LISTING COMPONENT START -->
       <section style="display: flex; max-width: 85%; margin: 50px auto; justify-content: space-between;">
         <div class="card" style="width: 18rem;">
           <img src="./img_folder/img1.jpg" class="card-img-top" alt="...">
@@ -126,6 +139,8 @@
           </div>
         </div>
       </section>
+      <!-- PRODUCT LISTING COMPONENT END -->
+      <!-- FOOTER COMPONENT START -->
       <section>
         <div class="container">
           <footer class="py-5">
@@ -187,5 +202,6 @@
           </footer>
         </div>
       </section>
+      <!-- FOOTER COMPONENT END -->
 </body>
 </html>
